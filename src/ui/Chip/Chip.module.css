@@ -1,0 +1,18 @@
+.chip {
+  background-color: var(--gray-100);
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 160%;
+  height: 34px;
+  border-radius: 30px;
+  color: inherit;
+  transition: none;
+}
+
+@media (max-width: 920px) {
+  .chip {
+    font-size: 16px;
+    height: 38px;
+  }
+}

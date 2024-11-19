@@ -1,0 +1,49 @@
+.switch {
+  --height: 31px;
+  --width: 62px;
+
+  background-color: var(--gray-200);
+  border-radius: 31px;
+  padding: 3px;
+  cursor: pointer;
+  width: var(--width);
+  height: var(--height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+[data-theme='dark'] .dark {
+  background: var(--main-black);
+  color: var(--blue-150);
+}
+
+[data-theme='light'] .light {
+  color: var(--blue-150);
+  background: var(--main-white);
+}
+[data-theme='light'] .dark {
+  color: var(--gray-400);
+}
+[data-theme='dark'] .light {
+  color: var(--gray-300);
+}
+
+.dark,
+.light {
+  border-radius: 27px;
+  height: 27px;
+  width: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+[data-theme='light'] .switch:hover .dark {
+  color: var(--blue-300);
+}
+
+[data-theme='dark'] .switch:hover .light {
+  color: var(--blue-300);
+}

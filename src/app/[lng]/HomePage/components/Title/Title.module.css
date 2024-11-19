@@ -1,0 +1,16 @@
+.title {
+  white-space: nowrap;
+}
+
+@media (max-width: 920px) {
+  .title {
+    font-size: 18px;
+    line-height: 135%;
+  }
+}
+
+@media (max-width: 380px) {
+  .title {
+    white-space: wrap;
+  }
+}

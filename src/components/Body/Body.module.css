@@ -1,0 +1,11 @@
+.body {
+  background-color: var(--body-color);
+  padding: 32px;
+  border-radius: 20px;
+}
+
+@media (max-width: 920px) {
+  .body {
+    padding: 24px 20px;
+  }
+}

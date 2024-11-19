@@ -1,0 +1,69 @@
+.container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 24px 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto 1fr;
+  gap: 12px;
+}
+
+.license {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.cis {
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.team {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.documents {
+  min-height: 370px;
+  grid-row-start: 2;
+  grid-row-end: 4;
+
+  background-image: url('/images/chart.png');
+  background-repeat: no-repeat;
+  background-position: -87px 120px;
+}
+
+[data-theme='dark'] .documents {
+  background-image: url('/images/chart-dark.png');
+}
+
+@media (max-width: 1440) {
+  .documents {
+    background-position: -87px 80px;
+  }
+}
+
+@media (max-width: 1280) {
+  .documents {
+    background-position: -87px 60px;
+  }
+}
+
+@media (max-width: 920px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .documents {
+    min-height: 340px;
+    background-position: -100px 40px;
+  }
+}
+
+@media (max-width: 720) {
+  .documents {
+    background-size: cover;
+    background-position: -110px 120px;
+  }
+}
