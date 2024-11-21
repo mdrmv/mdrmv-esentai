@@ -10,7 +10,9 @@ export const Cis = () => {
   const { t } = useTranslation('home-page');
   return (
     <Stack spacing={16} spacingMobile={12}>
-      <Title>{t('cis.title')}</Title>
+      <header>
+        <Title>{t('cis.title')}</Title>
+      </header>
       <Subtitle>{t('cis.subtitle')}</Subtitle>
     </Stack>
   );

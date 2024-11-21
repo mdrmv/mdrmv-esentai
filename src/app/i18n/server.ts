@@ -25,7 +25,7 @@ type $FirstNamespace<Ns extends Namespace> = Ns extends readonly never[]
   ? Ns[0]
   : Ns;
 
-export async function useServerTranslation<
+export async function getTranslation<
   Ns extends FlatNamespace | $Tuple<FlatNamespace>,
   KPrefix extends KeyPrefix<
     FallbackNs<

@@ -31,20 +31,22 @@ export const Documents = () => {
 
   return (
     <Stack spacing={20} spacingMobile={16}>
-      <Title>{t('documents.title')}</Title>
+      <header>
+        <Title>{t('documents.title')}</Title>
+      </header>
 
-      <div className={styles.documents}>
+      <ul className={styles.documents}>
         {documents.map(({ name, href }) => (
-          <div key={name}>
+          <li key={name} className={styles.document}>
             <div className={styles.documentIcon}>
               <Icon.Document />
             </div>
             <a className={styles.documentTitle} href={href} target="_blank">
               {t(name)}
             </a>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </Stack>
   );
 };

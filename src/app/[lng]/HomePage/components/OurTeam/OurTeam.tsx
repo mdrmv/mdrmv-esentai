@@ -15,16 +15,23 @@ export const OurTeam = () => {
 
   return (
     <Stack spacing={20} spacingMobile={16}>
-      <Title>{t('ourTeam.title')}</Title>
+      <header>
+        <Title>{t('ourTeam.title')}</Title>
+      </header>
 
-      <div className={styles.teams}>
+      <ul className={styles.teams}>
         {teams.map(({ name, position }) => (
-          <Stack key={name} spacing={4}>
+          <Stack
+            key={name}
+            className={styles.team}
+            component={'li'}
+            spacing={4}
+          >
             <Typography className={styles.name}>{name}</Typography>
             <Typography className={styles.position}>{position}</Typography>
           </Stack>
         ))}
-      </div>
+      </ul>
     </Stack>
   );
 };

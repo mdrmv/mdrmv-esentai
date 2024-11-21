@@ -6,7 +6,7 @@
   min-width: 392px;
   max-width: 442px;
 }
-.teams > div {
+.team {
   display: flex;
   flex-direction: column;
   row-gap: 8px;

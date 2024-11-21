@@ -1,3 +1,5 @@
+import { ElementType } from 'react';
+
 type Spacing = 0 | 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32 | 36 | 48;
 
 export interface StackProps {
@@ -35,4 +37,6 @@ export interface StackProps {
     | 'normal';
 
   className?: string;
+
+  component?: ElementType;
 }

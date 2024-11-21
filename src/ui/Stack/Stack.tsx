@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import { cx } from '@/theme';
+import { Stack as StackMui } from '@mui/material';
 
 import { StackProps } from './types';
 
@@ -13,26 +13,26 @@ export const Stack = ({
   flexWrap = 'nowrap',
   className,
   children,
+  component = 'div',
 }: StackProps & PropsWithChildren) => {
   return (
-    <div className={cx('stack', className)}>
-      <style jsx>{`
-        .stack {
-          display: flex;
-          align-items: ${alignItems};
-          justify-content: ${justifyContent};
-          flex-wrap: ${flexWrap};
-          flex-direction: ${direction};
-          gap: ${spacing}px;
-        }
-
-        @media (max-width: 920px) {
-          .stack {
-            gap: ${spacingMobile ?? spacing}px;
-          }
-        }
-      `}</style>
+    <StackMui
+      alignItems={alignItems}
+      className={className}
+      component={component}
+      direction={direction}
+      flexWrap={flexWrap}
+      gap={`${spacing}px`}
+      justifyContent={justifyContent}
+      sx={{
+        '@media (max-width: 920px)': {
+          '&': {
+            gap: `${spacingMobile ?? spacing}px;`,
+          },
+        },
+      }}
+    >
       {children}
-    </div>
+    </StackMui>
   );
 };
