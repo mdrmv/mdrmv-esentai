@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[664],{2664:e=>{e.exports=JSON.parse('{"address":"Z05T8M2, the Republic of Kazakhstan, Astana, Esil district, Heydar Aliyev 1, office 1","copyright":"2024 \xa9 Private Company Esentai Asset Management Ltd"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[178],{4178:e=>{e.exports=JSON.parse('{"title":"Esentai Asset Management","description":"A playground to explore new Next.js 13/14 app directory features such as nested layouts, instant loading states, streaming, and component level data fetching."}')}}]);
