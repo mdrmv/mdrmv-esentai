@@ -6,9 +6,9 @@ import { fallbackLng, languages } from '../../i18n/settings';
 export async function generateMetadata({
   params,
 }: {
-  params: {
+  params: Promise<{
     lng: string;
-  };
+  }>;
 }): Promise<Metadata> {
   let { lng } = await params;
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
